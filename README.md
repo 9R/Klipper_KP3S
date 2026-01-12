@@ -1,5 +1,5 @@
 # Klipper KP3S 3.0
-![alt text](https://github.com/9R/klipper_KP3S/blob/main/klipper%20kp3s_30.png?raw=true)
+![alt text](/images/klipper%20kp3s_30.png?raw=true)
 
 
 ##Changes from upstream
@@ -36,7 +36,21 @@ cd ~/klipper
 make menuconfig
 ```
 
-![alt text](https://raw.githubusercontent.com/9R/Klipper_KP3S/main/make.png)
+### menuconfig parameters:
+```less
+                  Klipper Firmware Configuration
+[*] Enable extra low-level configuration options
+    Micro-controller Architecture (STMicroelectronics STM32)  --->
+    Processor model (STM32F103)  --->
+[ ] Only 10KiB of RAM (for rare stm32f103x6 variant)
+[*] Disable SWD at startup (for GigaDevice stm32f103 clones)
+    Bootloader offset (28KiB bootloader)  --->
+    Clock Reference (8 MHz crystal)  --->
+    Communication interface (Serial (on USART3 PB11/PB10))  --->
+(250000) Baud rate for serial port
+[*] Optimize stepper code for 'step on both edges'
+(!PC6, !PD13) GPIO pins to set at micro-controller startup
+```
 
 ```bash
 make 

@@ -68,6 +68,10 @@ After a successful firmware update the file on the SDcard will be renamed to ROB
 
 # Hardware modifications
 
+## Separate control of heatbreak and part cooling fans (since [d58fd09](https://github.com/9R/Klipper_KP3S/commit/d58fd09e4fb18d21ddbeb14e0dcae3137a785e8f))
+
+For separate control of heatbreak and printed part via PWM, the part cooling fans are connected in parallel to the regular fan connector (Fan [PB1]), while the heatbreak cooling fan is attached to the unused heater connector (HE1 [PB0]).
+
 ## Enabled stepper UART (since [c581bc7](https://github.com/9R/Klipper_KP3S/commit/c581bc73a7a3341313e8b4799837c19155bdf6f4))
 
 To use stepper driver configuration via UART a bit of light soldering and modifying the stepper jumpers is necessary.
